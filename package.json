@@ -1,0 +1,44 @@
+{
+  "name": "@vaened/create-project",
+  "type": "module",
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "CLI for creating new projects with a custom structure",
+  "authors": [
+    {
+      "name": "Enea Dhack",
+      "email": "contact@vaened.dev"
+    }
+  ],
+  "keywords": [
+    "react",
+    "vite",
+    "template",
+    "cli"
+  ],
+  "bin": {
+    "create-project": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsup --watch --onSuccess \"node dist/index.js\"",
+    "build": "tsup --minify"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "dependencies": {
+    "@clack/prompts": "^0.9.0",
+    "fs-extra": "^11.2.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.0.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
