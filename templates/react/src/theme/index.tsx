@@ -3,7 +3,7 @@
  * @link https://vaened.dev DevFolio
  */
 
-import { ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import { default as theme } from "./config.ts";
 import "./mui.d.ts";
@@ -13,7 +13,12 @@ interface AppThemeProviderProps {
 }
 
 export const AppThemeProvider: React.FC<AppThemeProviderProps> = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  );
 };
 
 export default AppThemeProvider;
